@@ -11,23 +11,27 @@
 # packages installation 
 
 userid=$(id -u)
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[30m"
 
 checking_root(){
     if [ $userid -eq 0 ]
     then 
-    echo "It is already following with the root priviledges"
+    echo -e "$G It is already following with the root priviledges $N"
     else
-    echo "Please make sure it should be with the root priviledges"
+    echo -e "$R Please make sure it should be with the root priviledges $N"
     fi 
 }
 
 validating(){
     if [ $1 -ne 0 ]
     then 
-    echo "$2 is failed"
+    echo -e "$R $2 is failed $N"
     exit 12 
     else 
-    echo "$2 is succeded"
+    echo -e "$G $2 is succeded $N"
     fi 
 }
 
@@ -38,10 +42,10 @@ do
     dnf list installed $package
     if [ $? -ne 0 ]
     then 
-        echo "$package is not installed.please install it now"
+        echo -e "$R $package is not installed.please install it now $N"
         dnf install $package -y 
-        validating $? "Installing $package is:"
+        validating $? "Installing $package:"
     else 
-       echo "Installing $package"
+       echo -e "$G Installing $package $N"
     fi 
 done 
