@@ -46,6 +46,6 @@ do
         dnf install $package -y 
         validating $? "Installing $package:"
     else 
-       echo -e "$G Installing $package $N"
+       echo -e "$G $package is already installed $N"
     fi 
 done 
