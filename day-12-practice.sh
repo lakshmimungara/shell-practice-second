@@ -10,6 +10,13 @@
 
 # packages installation 
 
+folder="/var/log/shell-script"
+mkdir -p $folder 
+script_name=$(echo "day-12-practice" | cut -d "." -f1)
+time=$(date +%Y-%m-%d-%H)
+log_file="$folder/$script_name-$time.log"
+
+
 userid=$(id -u)
 R="\e[31m"
 G="\e[32m"
@@ -19,21 +26,31 @@ N="\e[30m"
 checking_root(){
     if [ $userid -eq 0 ]
     then 
-    echo -e "$G It is already following with the root priviledges $N"
+        echo -e "$G It is already following with the root priviledges $N"
     else
-    echo -e "$R Please make sure it should be with the root priviledges $N"
+        echo -e "$R Please make sure it should be with the root priviledges $N"
     fi 
 }
 
 validating(){
     if [ $1 -ne 0 ]
     then 
-    echo -e "$R $2 is failed $N"
-    exit 12 
+        echo -e "$R $2 is failed $N"
+        exit 12 
     else 
-    echo -e "$G $2 is succeded $N"
+        echo -e "$G $2 is succeded $N"
     fi 
 }
+
+usage(){
+    echo -e "$R usage:: $N sudo sh day-12-practice.sh package1 package2....."
+}
+
+if [ $# -eq 0 ]
+then 
+    usage 
+fi 
+
 
 checking_root
 
