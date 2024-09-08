@@ -61,7 +61,7 @@ do
     dnf list installed $package &>>$log_file
     if [ $? -ne 0 ]
     then 
-        echo "$package is not installed.please install it now" | tee -a &>>$log_file
+        echo -e "$Y $package is not installed.please install it now" | tee -a &>>$log_file
         dnf install $package -y  &>>$log_file
         validating $? "Installing $package:" 
     else 
