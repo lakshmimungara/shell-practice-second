@@ -11,3 +11,9 @@ echo "please run this script with the root privileges"
 fi 
 
 dnf install git -y 
+
+ls -ltr 
+
+lshsla -ls
+
+ls -l 
