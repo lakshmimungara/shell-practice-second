@@ -14,10 +14,10 @@ else
     echo -e "$source_dir $R does not exist $N"
 fi 
 
-files=$(find $source_dir - name "*.log" -mtime +14)
+files=$(find $source_dir -name "*.log" -mtime +14)
 echo "files: $files"
 
-while IFS=read -r file 
+while IFS= read -r file 
 do 
   echo "deleting files: $files"
   rm -rf $file
