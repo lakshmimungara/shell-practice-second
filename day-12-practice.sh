@@ -13,7 +13,7 @@
 folder="/var/log/shell-script"
 mkdir -p $folder 
 script_name=$(echo $0 | cut -d "." -f1)
-time=$(date +%Y-%m-%d-%H)
+time=$(date +%Y-%m-%d-%H-%M-%S)
 log_file="$folder/$script_name-$time.log"
 
 
