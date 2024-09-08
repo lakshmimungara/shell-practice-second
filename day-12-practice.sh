@@ -44,7 +44,7 @@ validating(){
 }
 
 usage(){
-    echo -e "$R usage:: $N sudo sh day-12-practice.sh package1 package2....."
+    echo -e "$R usage:: $Y sudo sh day-12-practice.sh package1 package2....."
 }
 
 
