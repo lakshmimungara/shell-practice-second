@@ -36,13 +36,13 @@ echo "password entered is: $password"
 # Arrays 
 
 BTS=("RM" "JIN" "SUGA" "J-HOPE" "V" "JIMIN" "JUNGKOOK")
-echo "leader of the group is: $BTS[0]"
-echo "world wide handsome is: $BTS[1]"
-echo "world famous rapper is: $BTS[2]"
-echo "the best dancer is: $BTS[3]"
-echo "most handsome man in the world: $BTS[4]"
-echo "The cutest man: $BTS[5]"
-echo "The best singer: $BTS[6]"
+echo "leader of the group is: ${BTS[0]}"
+echo "world wide handsome is: ${BTS[1]}"
+echo "world famous rapper is: ${BTS[2]}"
+echo "the best dancer is: ${BTS[3]}"
+echo "most handsome man in the world: ${BTS[4]}"
+echo "The cutest man: ${BTS[5]}"
+echo "The best singer: ${BTS[6]}"
 echo "All the wonderful persons and my fav: {$BTS[@]}"
 
 
