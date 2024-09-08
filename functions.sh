@@ -39,9 +39,12 @@ fi
 
 dnf list installed git 
 
-if [ $? -eq 0 ]
+if [ $? -ne 0 ]
 then 
-    echo "git is already installed"
+    echo "git is not installed. please install it now"
+    dnf install git -y 
+    validate $? "Installing git"
+    
     if [ $? -ne 0 ]
     then
         echo "git installation is already succeded"  
@@ -50,7 +53,5 @@ then
         exit 12 
     fi 
 else 
-    echo "git is not installed. please install it now"
-    dnf install git -y 
-    validate $? "Installing git"
+    echo "git is already installed"
 fi 
