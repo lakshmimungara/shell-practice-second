@@ -40,7 +40,7 @@ do
     then 
         echo "$package is not installed.please install it now"
         dnf install $package -y 
-        validating $? "Installing mysql is:"
+        validating $? "Installing $package is:"
     else 
        echo "Installing $package"
     fi 
