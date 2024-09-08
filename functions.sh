@@ -16,7 +16,7 @@ then
     echo " please run the script with root priviledges"
     exit 127 
 else 
-    echo "it is already with the root priviledges"
+    echo "It is already running with the root priviledges"
 fi 
 
 dnf list installed mysql
