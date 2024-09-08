@@ -25,14 +25,14 @@ echo "process id of last background command: $!"
 
 #conditions
 
-# number=$1
+number=$1
 
-# if [ $number -eq 0 ]
-# then 
-# echo "exit status is success"
-# else 
-# echo "otherwise from 1 to 127 are failure"
-# fi 
+if [ $number -eq 0 ]
+then 
+echo "exit status is success"
+else 
+echo "otherwise from 1 to 127 are failure"
+fi 
 
 
 
