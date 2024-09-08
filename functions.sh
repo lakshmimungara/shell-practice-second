@@ -49,11 +49,11 @@ then
     dnf install git -y 
     validate $? "Installing git"
     
-    if [ $? -ne 0 ]
+    if [ $? -eq 0 ]
     then
         echo "git installation is already succeded"  
     else
-         echo "git installaton is failed"
+        echo "git installaton is failed"
         exit 12 
     fi 
 else 
