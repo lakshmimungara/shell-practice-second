@@ -8,6 +8,7 @@ then
 echo "exit status is success"
 else
 echo "please run this script with the root privileges"
+exit 1
 fi 
 
 dnf install git -y 
