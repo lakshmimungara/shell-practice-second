@@ -36,7 +36,6 @@ validating(){
 echo "script started executing at: $(date)" | tee -a $log_file
 
 checking_root
-
 dnf install nginx &>>$log_file
 validating $? "nginx installation"
 
