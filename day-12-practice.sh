@@ -29,16 +29,17 @@ checking_root(){
         echo -e "$G It is already following with the root priviledges $N" &>>$log_file
     else
         echo -e "$R Please make sure it should be with the root priviledges $N" &>>$log_file
+        exit 23
     fi 
 }
 
 validating(){
     if [ $1 -ne 0 ]
     then 
-        echo -e "$R $2 is failed $N" &>>$log_file
+        echo -e "$2 is $R failed $N" &>>$log_file
         exit 12 
     else 
-        echo -e "$G $2 is succeded $N" &>>$log_file
+        echo -e "$2 is $G succeded $N" &>>$log_file
     fi 
 }
 
@@ -59,10 +60,10 @@ do
     dnf list installed $package &>>$log_file
     if [ $? -ne 0 ]
     then 
-        echo -e "$R $package is not installed.please install it now $N" &>>$log_file
+        echo "$package is not installed.please install it now" &>>$log_file
         dnf install $package -y  &>>$log_file
         validating $? "Installing $package:" 
     else 
-       echo -e "$G $package is already installed $N" &>>$log_file
+       echo -e "$G $package is already $Y installed $N" &>>$log_file
     fi 
 done 
