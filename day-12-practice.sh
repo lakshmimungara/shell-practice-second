@@ -47,7 +47,7 @@ usage(){
     echo -e "$R usage:: $Y sudo sh day-12-practice.sh package1 package2....."
 }
 
-echo "script started executing at: $(date)" | tee -a &>>$log_file
+echo "script started executing at: $(date)" | tee -a $log_file
 
 checking_root
 
@@ -61,10 +61,10 @@ do
     dnf list installed $package &>>$log_file
     if [ $? -ne 0 ]
     then 
-        echo -e "$Y $package is not installed.please install it now" | tee -a &>>$log_file
+        echo -e "$Y $package is not installed.please install it now" | tee -a $log_file
         dnf install $package -y  &>>$log_file
         validating $? "Installing $package:" 
     else 
-       echo -e "$G $package is already $Y installed $N" | tee -a &>>$log_file
+       echo -e "$G $package is already $Y installed $N" | tee -a $log_file
     fi 
 done 
