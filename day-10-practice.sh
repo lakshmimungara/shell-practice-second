@@ -43,6 +43,6 @@ echo "the best dancer is: ${BTS[3]}"
 echo "most handsome man in the world: ${BTS[4]}"
 echo "The cutest man: ${BTS[5]}"
 echo "The best singer: ${BTS[6]}"
-echo "All the wonderful persons and my fav: {$BTS[@]}"
+echo "All the wonderful persons and my fav: ${BTS[@]}"
 
 
