@@ -37,8 +37,6 @@ echo "script started executing at: $(date)" | tee -a $log_file
 
 checking_root
 
-echo "script started executing at $(date)" &>>$log_file
-
 dnf install nginx &>>$log_file
 validating $? "nginx installation"
 
