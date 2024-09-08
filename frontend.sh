@@ -58,5 +58,5 @@ validating $? "unzipping frontend"
 cp /home/ec2-user/shell-practice-second/expense.conf /etc/nginx/default.d/expense.conf
 validating $? "nginx config copy"
 
-systectl restart nginx &>>$log_file
+systemctl restart nginx &>>$log_file
 validating $? "nginx restart"
