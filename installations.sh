@@ -3,10 +3,8 @@
 userid=$(id -u)
 echo "userid is: $userid"
 
-if [ $userid -eq 0 ]
+if [ $userid -ne 0 ]
 then 
-echo "exit status is success"
-else
 echo "please run this script with the root privileges"
 exit 1
 fi 
