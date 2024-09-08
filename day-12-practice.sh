@@ -21,7 +21,7 @@ userid=$(id -u)
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
-N="\e[30m"
+N="\e[35m"
 
 checking_root(){
     if [ $userid -eq 0 ]
