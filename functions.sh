@@ -35,6 +35,7 @@ echo "Mysql installation is succeded"
 fi 
 else
 echo "mysql already installed."
+fi 
 
 dnf list installed git 
 
