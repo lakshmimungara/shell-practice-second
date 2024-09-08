@@ -46,13 +46,13 @@ usage(){
     echo -e "$R usage:: $N sudo sh day-12-practice.sh package1 package2....."
 }
 
+
+checking_root
+
 if [ $# -eq 0 ]
 then 
     usage 
 fi 
-
-
-checking_root
 
 for package in $@
 do 
