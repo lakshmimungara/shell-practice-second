@@ -56,7 +56,7 @@ fi
 
 for package in $@
 do 
-    dnf list installed $package
+    dnf list installed $package &>>$log_file
     if [ $? -ne 0 ]
     then 
         echo -e "$R $package is not installed.please install it now $N" &>>$log_file
