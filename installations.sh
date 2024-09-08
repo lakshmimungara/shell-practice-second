@@ -1,7 +1,7 @@
 #!/bin/bash
 
 userid=$(id -u)
-echo "userid is: $userid"
+# echo "userid is: $userid"
 
 if [ $userid -ne 0 ]
 then 
