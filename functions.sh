@@ -51,3 +51,4 @@ else
 echo "git is not installed. please install it now"
 dnf install git -y 
 validate $? "Installing git"
+fi 
