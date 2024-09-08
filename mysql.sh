@@ -56,5 +56,5 @@ echo "mysql root password is not setup" &>>$log_file
 mysql_secure_installation --set-root-pass ExpenseApp@1 
 validating $? "setting up root password"
 else
-echo "mysql root password is already setup $Y skipping $N" | tee -a $log_file
+echo -e "mysql root password is already setup $Y skipping $N" | tee -a $log_file
 fi 
