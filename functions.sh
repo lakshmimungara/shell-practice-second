@@ -44,11 +44,10 @@ then
     echo "git is already installed"
     if [ $? -ne 0 ]
     then
-        echo "git installaton is failed"
-        exit 12 
-        
+        echo "git installation is already succeded"  
     else
-        echo "git installation is already succeded"
+         echo "git installaton is failed"
+        exit 12 
     fi 
 else 
     echo "git is not installed. please install it now"
