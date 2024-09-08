@@ -17,7 +17,7 @@ checking_root(){
     then 
     echo "It is already following with the root priviledges"
     else
-    echo "Please make sure it should be with with root priviledges"
+    echo "Please make sure it should be with the root priviledges"
     fi 
 }
 
