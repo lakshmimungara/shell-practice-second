@@ -26,9 +26,9 @@ N="\e[35m"
 checking_root(){
     if [ $userid -eq 0 ]
     then 
-        echo -e "$G It is already following with the root priviledges $N" | tee -a &>>$log_file
+        echo -e "$G It is already following with the root priviledges $N" | tee -a $log_file
     else
-        echo -e "$R Please make sure it should be with the root priviledges $N" | tee -a &>>$log_file
+        echo -e "$R Please make sure it should be with the root priviledges $N" | tee -a $log_file
         exit 23
     fi 
 }
@@ -36,10 +36,10 @@ checking_root(){
 validating(){
     if [ $1 -ne 0 ]
     then 
-        echo -e "$2 is $R failed $N" | tee -a &>>$log_file
+        echo -e "$2 is $R failed $N" | tee -a $log_file
         exit 12 
     else 
-        echo -e "$2 is $G succeded $N" | tee -a &>>$log_file
+        echo -e "$2 is $G succeded $N" | tee -a $log_file
     fi 
 }
 
