@@ -13,8 +13,16 @@ fi
 
 dnf install git -y 
 
-ls -ltr 
+# ls -ltr 
 
-lshsla -ls
+# lshsla -ls
 
-ls -l 
+# ls -l 
+
+if [ $? -ne 0 ]
+then 
+echo "git is not installed. please install it now"
+dnf install git -y 
+else
+echo "git is already installed. nothing to do"
+fi 
