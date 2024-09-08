@@ -47,7 +47,7 @@ usage(){
     echo -e "$R usage:: $Y sudo sh day-12-practice.sh package1 package2....."
 }
 
-echo "script started executing at: $(date)" | tee -a $log_file
+echo "script started executing at: $(date)" | tee -a &>>$log_file
 
 checking_root
 
