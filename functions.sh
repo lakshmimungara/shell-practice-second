@@ -2,6 +2,16 @@
 
 userid=$(id -u)
 
+check_root(){
+    if [ $userid -ne 0 ]
+then 
+    echo " please run the script with root priviledges"
+    exit 127 
+else 
+    echo "It is already running with the root priviledges"
+fi 
+}
+
 validate(){
     if [ $1 -eq 0 ]
     then 
@@ -11,13 +21,7 @@ validate(){
     fi 
 }
 
-if [ $userid -ne 0 ]
-then 
-    echo " please run the script with root priviledges"
-    exit 127 
-else 
-    echo "It is already running with the root priviledges"
-fi 
+check_root
 
 dnf list installed mysql
 
