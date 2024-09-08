@@ -2,10 +2,10 @@
 
 #loops
 
-for i in {0..15}
-do 
-echo $i 
-done 
+# for i in {0..15}
+# do 
+# echo $i 
+# done 
 
 
 # packages installation 
